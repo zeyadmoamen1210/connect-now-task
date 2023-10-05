@@ -1,0 +1,69 @@
+.gamefilter {
+  padding: 2rem;
+  background: var(--primary);
+  width: 100%;
+  max-width: 100%;
+
+  @include respond-to(medium) {
+    max-width: 30rem;
+  }
+  &__heading {
+    margin-bottom: 1rem;
+    font-family: Montserrat;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2.5rem;
+    width: 100%;
+    button {
+      width: 100%;
+      @include respond-to(small) {
+        width: 8rem;
+      }
+    }
+    @include respond-to(large) {
+      flex-direction: row-reverse;
+      margin-top: 0;
+    }
+  }
+}
+
+.form-item {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  &__label {
+    font-family: Montserrat;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
+  &__wrap {
+    @include respond-to(small) {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    @include respond-to(medium) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 3.5rem;
+    background: var(--inputbg);
+    border-right: .3rem;
+    outline: none;
+    color: var(--white);
+    border: none;
+    padding: .5rem;
+    &::placeholder {
+      color: #B7CBE4;
+    }
+  }
+}

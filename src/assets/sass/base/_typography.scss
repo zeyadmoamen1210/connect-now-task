@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Mulish;
+    src: url(@/assets/fonts/Mulish-Medium.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(@/assets/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: MontserratSemibold;
+    src: url(@/assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+
+// 1rem value
+html {
+    font-size: 62.5%;
+    @include respond-to(medium) {
+        font-size: 68.25% !important;
+    }
+    @include respond-to(large) {
+        font-size: 80% !important; 
+    }
+}
+
+body {
+    line-height: 1.7;
+    font-size: 1.6rem;
+    font-family: Mulish;
+}
+
+.default-theme {
+    color: var(--white);
+}
+
+.font {
+    &--montserrat {
+        font-family: Montserrat;
+        &--semibold {
+            font-family: MontserratSemibold;
+        }
+    }
+    &--mulish {
+        font-family: Mulish;
+    }
+}

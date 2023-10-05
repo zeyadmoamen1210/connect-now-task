@@ -1,0 +1,18 @@
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 5rem;
+  margin-top: 5rem;
+  flex-direction: column;
+  @include respond-to(medium) {
+    flex-direction: row;
+  }
+
+  &__filters {
+    align-self: start;
+
+  }
+  &__cards {
+    flex: 1;
+  }
+}

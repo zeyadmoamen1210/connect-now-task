@@ -1,0 +1,28 @@
+
+
+/* UTILS */
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/helpers";
+
+/* BASE */
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
+
+/* Layouts */
+@import "layout/navbar";
+
+/* THEMES */
+@import "themes/default";
+
+/* Components */
+@import "components/filter-card";
+@import "components/game-card";
+@import "components/button";
+@import "components/order-by";
+@import "components/loading";
+
+/* PAGES */
+@import "pages/home-view";
+@import "pages/contact-view";

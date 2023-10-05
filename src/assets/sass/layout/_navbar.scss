@@ -1,0 +1,36 @@
+.navbar {
+    &__ul {
+        padding-top: 6rem;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem 5rem;
+        flex-direction: column;
+
+        @include respond-to(medium) {
+            flex-direction: row;
+        }
+    }
+    &__a {
+        text-decoration: none;
+        color: var(--white);
+        text-transform: uppercase;
+        @extend .font--montserrat;
+        font-size: 2.5rem;
+        
+        &--active { 
+            z-index: 2;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -3.7rem;
+                left: -2rem;
+                content: attr(name);
+                color: var(--inputbg);
+                font-size: 4.5rem;
+                font-weight: bold;
+                z-index: -1;
+            }
+        }
+    }
+}
